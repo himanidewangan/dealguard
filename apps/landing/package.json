@@ -1,0 +1,22 @@
+{
+  "name": "@dealguard/landing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"no tests in landing\""
+  },
+  "dependencies": {
+    "@dealguard/core": "workspace:*",
+    "@dealguard/engine": "workspace:*",
+    "@fontsource/space-mono": "5.3.0",
+    "@fontsource/dm-sans": "5.3.0"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vite": "8.3.8"
+  }
+}

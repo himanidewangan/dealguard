@@ -1,0 +1,9 @@
+name = "dealguard-proxy"
+main = "src/index.ts"
+compatibility_date = "2026-11-01"
+
+# Secrets are never listed here. Set them with:
+#   wrangler secret put ANTHROPIC_API_KEY
+#   wrangler secret put INSTALL_TOKEN_SECRET
+#   wrangler secret put ALLOWED_ORIGIN      (chrome-extension://<extension id>)
+# Optional: ANTHROPIC_MODEL, DAILY_CAP

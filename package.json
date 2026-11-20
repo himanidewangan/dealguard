@@ -1,0 +1,21 @@
+{
+  "name": "dealguard",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.21.0",
+  "scripts": {
+    "postinstall": "pnpm -F @dealguard/extension exec wxt prepare",
+    "dev": "pnpm -F @dealguard/extension dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "eval": "pnpm -F @dealguard/engine eval",
+    "build:landing": "sh scripts/build-landing.sh",
+    "deploy:landing": "sh scripts/deploy-landing.sh",
+    "e2e": "node scripts/e2e/run.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vitest": "5.1.1"
+  }
+}

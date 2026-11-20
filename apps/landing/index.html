@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>DealGuard: is that brand deal real?</title>
+<meta name="description" content="Check a brand-deal email or DM for scam signs. Runs on your device." />
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true">Dg</span>DealGuard</a>
+    <div class="nav-links">
+      <a href="#try">Try it</a><a href="#install">Install</a><a href="#patterns">Scam patterns</a><a href="#how">How it decides</a><a href="#privacy">Privacy</a>
+    </div>
+    <a class="btn btn-ghost" href="#try">Check a message</a>
+    <a class="btn btn-mint" href="dealguard-extension.zip" download>Download extension</a>
+  </nav>
+
+  <header class="block hero" id="top">
+    <div class="hero-copy">
+      <span class="chip"><span class="dot" style="color:var(--butter)"></span>Hackathon prototype · for nano and micro creators in India</span>
+      <h1>Is that brand deal real?</h1>
+      <p class="lead">Paste the email or DM. DealGuard shows what looks wrong, drafts a reply that is safe to send, and prepares the text for a cybercrime report. It works on your device.</p>
+      <div class="cta-row">
+        <a class="btn btn-mint" href="dealguard-extension.zip" download>Download Chrome extension</a>
+        <a class="btn btn-ghost" href="#try">Check a message</a>
+        <a class="btn btn-ghost" href="#how">See how it decides</a>
+      </div>
+    </div>
+    <div class="rows" aria-label="What you get">
+      <div class="row"><span class="ico" style="background:var(--coral)"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M12 8v5M12 16v.01"/></svg></span><div><b>A verdict</b><span>Likely scam, Suspicious, or No red flags found</span></div></div>
+      <div class="row"><span class="ico" style="background:var(--butter)"><svg viewBox="0 0 24 24"><path d="M5 6h14M5 12h14M5 18h9"/></svg></span><div><b>The evidence</b><span>Each red flag quoted from the message</span></div></div>
+      <div class="row"><span class="ico" style="background:var(--mint)"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></span><div><b>A safe reply</b><span>No fee, no login, ready to copy</span></div></div>
+      <div class="row"><span class="ico" style="background:var(--sky)"><svg viewBox="0 0 24 24"><path d="M6 21V4M6 5h11l-2 4 2 4H6"/></svg></span><div><b>A report kit</b><span>Text for 1930 and cybercrime.gov.in</span></div></div>
+    </div>
+  </header>
+
+  <section class="block" id="try" aria-labelledby="try-h">
+    <div class="demo-head">
+      <div>
+        <div class="eyebrow">Live demo · sample messages</div>
+        <h2 id="try-h" style="margin-top:12px">Check a message</h2>
+        <p>Pick a sample or paste your own. The checks run in this page and nothing is sent anywhere. The extension adds the optional AI explanation.</p>
+      </div>
+    </div>
+    <div class="demo">
+      <div class="card">
+        <div class="chips" role="group" aria-label="Sample messages">
+          <button class="chip" type="button" id="s1" aria-pressed="true">Pay-first fee</button>
+          <button class="chip" type="button" id="s2" aria-pressed="false">Look-alike sign-in</button>
+          <button class="chip" type="button" id="s3" aria-pressed="false">Plain brief</button>
+        </div>
+        <label for="msg" class="eyebrow" style="display:block;margin-bottom:8px">Message text</label>
+        <textarea id="msg" spellcheck="false" placeholder="Paste an email or DM here. Include the From line if you have it."></textarea>
+        <div class="actions">
+          <button class="btn btn-mint" type="button" id="run">Check message</button>
+          <button class="btn btn-ghost" type="button" id="clear">Clear</button>
+        </div>
+        <p class="note">Sample messages are made up. Brands named in them are used only to show the checks.</p>
+      </div>
+      <div class="result" id="result" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="block install" id="install" aria-labelledby="inst-h">
+    <div>
+      <div class="eyebrow">Install</div>
+      <h2 id="inst-h" style="margin-top:12px">Add DealGuard to Chrome</h2>
+      <p class="muted" style="margin-top:14px;max-width:46ch">The extension asks for no browser permissions. It is not on the Chrome Web Store yet, so you load it yourself in three steps.</p>
+      <div class="cta-row" style="margin-top:18px"><a class="btn btn-mint" href="dealguard-extension.zip" download>Download Chrome extension</a></div>
+    </div>
+    <ol class="steps">
+      <li><span>Unzip <code>dealguard-extension.zip</code> to a folder you will keep.</span></li>
+      <li><span>Open <code>chrome://extensions</code> and turn on <b>Developer mode</b>.</span></li>
+      <li><span>Choose <b>Load unpacked</b>, pick the unzipped folder, then pin DealGuard from the puzzle-piece menu.</span></li>
+    </ol>
+  </section>
+
+  <section class="block" id="patterns" aria-labelledby="pat-h">
+    <div class="sec-head">
+      <div class="eyebrow">What it looks for</div>
+      <h2 id="pat-h">Seven patterns behind most fake deals</h2>
+      <p>The three in coral are hard stops: any one makes the verdict Likely scam on its own. The rest add points. The examples are illustrations, not real messages.</p>
+    </div>
+    <div class="bento">
+      <article class="pat hard"><div class="tagline">Hard stop</div><h3>Pay first</h3><p>Asks you to pay a fee, deposit or courier charge before any work starts.</p><code>refundable registration fee ₹4,999</code></article>
+      <article class="pat hard"><div class="tagline">Hard stop</div><h3>Password, OTP or card</h3><p>Asks you to share a password, a one-time code or card details.</p><code>share your OTP to release payment</code></article>
+      <article class="pat hard"><div class="tagline">Hard stop</div><h3>Sign-in portal</h3><p>Sends you to a login page that isn't Google's or Instagram's own.</p><code>sign in with Google: brand-collab.in/signin</code></article>
+      <article class="pat wide"><div class="tagline">Points</div><h3>Look-alike brand</h3><p>A domain one letter off, or the brand name plus a word.</p><code>nikee.com · nykaa-collab.in</code></article>
+      <article class="pat wide"><div class="tagline">Points</div><h3>Fake cheque</h3><p>Overpays, then asks you to send back the difference.</p><code>refund the extra ₹15,000</code></article>
+      <article class="pat wide"><div class="tagline">Points</div><h3>Telegram or WhatsApp push</h3><p>Moves the conversation to a chat app where nothing is on record.</p><code>Continue on Telegram: t.me/deal_desk</code></article>
+      <article class="pat wide"><div class="tagline">Points</div><h3>Free mail posing as a brand</h3><p>A big brand name written from a Gmail or Yahoo address.</p><code>Nike Official &lt;nikee.collabs@gmail.com&gt;</code></article>
+    </div>
+  </section>
+
+  <section class="block how" id="how" aria-labelledby="how-h">
+    <div>
+      <div class="eyebrow">How it decides</div>
+      <h2 id="how-h" style="margin-top:12px">Code decides. A model only explains.</h2>
+      <p class="lead">Every message becomes a list of checks. Each check is fired, clear or unknown, and unknown never counts as a pass. A plain scoring rule turns the list into a verdict. Claude can explain the result after it is set, but it can't change it.</p>
+      <ul class="rules">
+        <li><b>Hard stop</b> Likely scam, whatever the points</li>
+        <li><b>60 or more</b> Likely scam</li>
+        <li><b>30 to 59</b> Suspicious</li>
+        <li><b>Under 30</b> No red flags found</li>
+      </ul>
+    </div>
+    <div class="bars" role="img" aria-label="Points per check, scale 0 to 40">
+      <div class="eyebrow" style="color:#A9C2B5">Points per check</div>
+      <div id="bars" style="display:flex;flex-direction:column;gap:10px"></div>
+      <p class="caption">Scale 0 to 40 points. Hard stops are not shown because they decide the verdict on their own. Checks that need a network lookup show as unknown in the demo.</p>
+    </div>
+  </section>
+
+  <section class="block" id="privacy" aria-labelledby="priv-h">
+    <div class="sec-head">
+      <div class="eyebrow">Privacy</div>
+      <h2 id="priv-h">Your messages stay with you</h2>
+    </div>
+    <div class="privacy-grid">
+      <div class="card"><h3>On your device</h3><ul><li>The checks and the score</li><li>Your saved messages and history</li><li>No account and no server to sign up for</li></ul></div>
+      <div class="card opt"><h3>Only if you switch it on</h3><ul><li>Explain with AI: the message text goes to the DealGuard server and Claude only when you press the button. Emails, phone numbers, card and ID numbers, UPI IDs, link paths, handles and most names are removed first, and nothing is stored</li><li>Domain age lookup: the sender's domain goes to the registry (planned)</li><li>Gmail connect: read-only, unread mail from people not in your contacts (planned)</li></ul></div>
+    </div>
+    <p class="statement">DealGuard never says a message is safe. It says what it found and what it couldn't check.</p>
+  </section>
+
+  <aside class="banner" aria-labelledby="ban-h">
+    <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.01"/></svg></span>
+    <div class="t"><h3 id="ban-h">Already paid or shared a login?</h3><p>Call the National Cyber Crime Helpline on <b>1930</b> and report at cybercrime.gov.in as soon as you can.</p></div>
+    <a class="btn btn-dark" href="https://cybercrime.gov.in" target="_blank" rel="noopener">Open cybercrime.gov.in</a>
+  </aside>
+  <p class="foot">DealGuard is a hackathon prototype built for the Anthropic and GoDaddy hackathon. Nothing on this page loads from a third party. The demo runs a limited ruleset and gives guidance, not proof. A message with no red flags can still be a scam.</p>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

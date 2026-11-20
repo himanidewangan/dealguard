@@ -1,0 +1,13 @@
+node_modules
+.output
+.wxt
+dist
+.env
+.env.*
+!.env.example
+.dev.vars
+.wrangler
+*.zip
+!apps/landing/public/.gitkeep
+
+!.env.deploy.example
